@@ -1,0 +1,81 @@
+Table users {
+    id INTEGER [pk, increment]
+    name VARCHAR(100)
+    email VARCHAR(100) [unique, not null]
+    password_hash VARCHAR(255)
+    phone VARCHAR(20)
+    role VARCHAR(20)
+}
+
+Table salons {
+    id INTEGER [pk, increment]
+    owner_id INTEGER [ref: > users.id]
+    name VARCHAR(100)
+    address VARCHAR(255)
+    phone VARCHAR(20)
+    category VARCHAR(10)
+    open_days VARCHAR(50)
+    total_seats INTEGER
+    has_waiting_room BOOLEAN
+}
+
+Table services {
+    id INTEGER [pk, increment]
+    name VARCHAR(100)
+    category VARCHAR(10)
+    description TEXT
+}
+
+Table service_options {
+    id INTEGER [pk, increment]
+    service_id INTEGER [ref: > services.id]
+    option_name VARCHAR(50)
+}
+
+Table salon_services {
+    salon_id INTEGER [ref: > salons.id]
+    service_id INTEGER [ref: > services.id]
+    price DECIMAL(10,2)
+    duration_minutes INTEGER
+    note: 'Services offered by a salon (join table). price/duration can be customized per salon.'
+    indexes {
+        (salon_id, service_id) [pk]
+    }
+}
+
+Table seats {
+    id INTEGER [pk, increment]
+    salon_id INTEGER [ref: > salons.id]
+    seat_number INTEGER
+    indexes {
+        (salon_id, seat_number) [unique]
+    }
+}
+
+Table bookings {
+    id INTEGER [pk, increment]
+    user_id INTEGER [ref: > users.id]
+    salon_id INTEGER [ref: > salons.id]
+    seat_id INTEGER [ref: > seats.id]
+    service_id INTEGER [ref: > services.id]
+    service_option_id INTEGER [ref: > service_options.id, null]
+    appointment_date DATE
+    appointment_time TIME
+    snack VARCHAR(20)
+    status VARCHAR(20)
+    created_at DATETIME [default: `now()`]
+    note: 'Each booking reserves one seat for a service at a specific date/time.'
+}
+
+Table snacks {
+    id INTEGER [pk, increment]
+    name VARCHAR(50)
+}
+
+Table salon_snacks {
+    salon_id INTEGER [ref: > salons.id]
+    snack_id INTEGER [ref: > snacks.id]
+    indexes {
+        (salon_id, snack_id) [pk]
+    }
+}
