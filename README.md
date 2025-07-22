@@ -52,6 +52,43 @@ Hair Color (Options: Multiple color options like red,blue,brown etc)
 Eyebrow Trim
 Scalp Massage & Conditioning Treatment
 
+Ideation Update:
+Salon employees can share their available times
+reservation notifications will go to all employees
+re-assigment of reservation from one employee to other
+extra charge fees on payment page (to user only) not in case of payment from client
+payment succes window (view ticket button)
+name & maill options for external users on reservation page (saved in cache)
+initial acct creation for external users after reseravtion
+reservation history, reservation list (for user & salon owners, employees)
+reservation summary (Order)
+Module wise summary
+transaction summary
+Unique Order(reservation) ID
+Employees get notificaation on the amount of money they would receieve from lubyc (from customer reservations)
+salon_reservation table to save salon reservation history for overview dashboard
+	- Transactions
+	- names or salon names & employee names associated
+
+service_providers (numbered Id) (add employee invitation, company dashboard)
+	- 1.Salon (Employee ID ,Roles, ) Employee based service providing
+	- 2.Doctor
+	- 3.Hotel
+	- 4.Cleaning etc.
+
+Different user flow for businesses
+
+Compnay Shift Module
+Current or Available dates on front
+
+Employees only specific tranX for the Business
+Service wise seats
+category wise employee assignment by the salon owner 
+Service Edit History (userId, time)
+Salon owner can block calender
+
+Example Salon Site: https://farzanasalon.com/
+
 # Database
 
 DB Relations: https://dbdocs.io/shatil1921046/Salon-DB?view=relationships  
