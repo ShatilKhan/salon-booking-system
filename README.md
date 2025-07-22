@@ -51,3 +51,12 @@ Pedicure (options: Nail, Feet)
 Hair Color (Options: Multiple color options like red,blue,brown etc)
 Eyebrow Trim
 Scalp Massage & Conditioning Treatment
+
+# Database
+
+DB Relations: https://dbdocs.io/shatil1921046/Salon-DB?view=relationships
+DB Diagram:
+
+<img width="1935" height="698" alt="SalonDB" src="https://github.com/user-attachments/assets/819e3cdc-f2ea-4b92-8a2c-e8136f56807e" />
+
+
