@@ -97,8 +97,9 @@ DB Diagram:
 <img width="1935" height="698" alt="SalonDB" src="https://github.com/user-attachments/assets/819e3cdc-f2ea-4b92-8a2c-e8136f56807e" />
 
 # Architecture
-<img width="4779" height="2165" alt="sysdesign-salon" src="https://github.com/user-attachments/assets/f83bf1d8-a4c2-4dcf-9971-36238e76ea59" />
+Mermaid: <img width="4779" height="2165" alt="sysdesign-salon" src="https://github.com/user-attachments/assets/f83bf1d8-a4c2-4dcf-9971-36238e76ea59" />  
 
+Eraser.io : https://app.eraser.io/workspace/5OIlYf65Wm96Q6EzldNg?origin=share
 
 
 
